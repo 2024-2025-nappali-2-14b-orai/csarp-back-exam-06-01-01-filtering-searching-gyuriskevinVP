@@ -32,5 +32,23 @@ namespace Kreata.Backend.Controllers
         {
             return Ok(await _studentRepo.GetNumberOfWomanAsync());
         }
+
+        [HttpGet("NumberOfMale")]
+        public async Task<IActionResult> GetNumberOfMaleAsync()
+        {
+            return Ok(await _studentRepo.GetNumberOfMaleAsync());
+        }
+
+        [HttpGet("NumberOfStudentsBornIn2021")]
+        public async Task<IActionResult> GetNumberOfStudentsBornIn2021Async()
+        {
+            return Ok(await _studentRepo.GetNumberOfStudentsBornIn2021Async());
+        }
+
+        [HttpGet("NumberOfStudentsBornInApril")]
+        public async Task<IActionResult> GetNumberOfStudentsBornInAprilAsync()
+        {
+            return Ok(await _studentRepo.GetNumberOfStudentsBornInAprilAsync());
+        }
     }
 }
