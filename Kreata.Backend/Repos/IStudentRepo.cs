@@ -9,6 +9,6 @@ namespace Kreata.Backend.Repos
         public Task<Student> GetByNameAsync(string firstName, string lastName);
         public Task<List<Student>> GetStudentByClass(int schoolYear, SchoolClassType schoolClassType);
 
-        public Task<int> GetNumberOfStudent();
+        public Task<int> GetNumberOfStudentAsync();
     }
 }
