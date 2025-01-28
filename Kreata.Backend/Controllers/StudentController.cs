@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Kreata.Backend.Controllers
 {
-    public class StudentController : BaseController<Student, StudentDto>
+    public partial class StudentController : BaseController<Student, StudentDto>
     {
         private IStudentRepo _studentRepo;
         public StudentController(StudentAssembler? assambler, IStudentRepo? repo) : base(assambler, repo)
