@@ -11,6 +11,11 @@ namespace Kreta.Shared.Models
         public int SchoolYear { get; set; }
         public SchoolClassType SchoolClass { get; set; }
         public string EducationLevel { get; set; } = string.Empty;
+
+        public bool IsWoman { get; set; } = false;
+
+        public bool IsMale => !IsWoman;
+
         public bool HasId => Id != Guid.Empty;
 
         public override string ToString()
