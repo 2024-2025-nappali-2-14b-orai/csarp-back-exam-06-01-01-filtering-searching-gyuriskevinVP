@@ -23,6 +23,11 @@ namespace Kreata.Backend.Repos
             return await _dbSet!.CountAsync();
         }
 
+        public async Task<int> GetNumberOfWomanAsync()
+        {
+            return await _dbSet!.CountAsync(s => s.IsWoman);
+        }
+
         public async Task<List<Student>> GetStudentByClass(int schoolYear, SchoolClassType schoolClassType)
         {
             return await _dbSet!
