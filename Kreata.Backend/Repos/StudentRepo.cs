@@ -54,5 +54,9 @@ namespace Kreata.Backend.Repos
                 .FindByCondition<Student>(s =>s.SchoolYear==schoolYear && s.SchoolClass==schoolClassType).ToListAsync();
         }
 
+        public async Task<int?> GetNumberOfStudentByYearAndMonthAsync(int year, int month)
+        {
+            return await _dbSet!.CountAsync(s => s.BirthsDay.Year == year && s.BirthsDay.Month == month);
+        }
     }
 }

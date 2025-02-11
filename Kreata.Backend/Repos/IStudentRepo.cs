@@ -17,5 +17,6 @@ namespace Kreata.Backend.Repos
         public Task<int> GetNumberOfStudentsBornIn2021Async();
         public Task<int> GetNumberOfStudentsBornInAprilAsync();
         Task<int> GetNumberOfStudentByYearAsync(int year);
+        Task<int?> GetNumberOfStudentByYearAndMonthAsync(int year, int month);
     }
 }
